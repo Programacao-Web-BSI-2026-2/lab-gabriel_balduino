@@ -28,7 +28,7 @@ sequenceDiagram
 
 ### Experimento 1: Netcat Nu & Falha 400 Bad Request
 * **Comando Testado:** `nc -C example.com 80` sem o header `Host:`
-* **Resultado:** [Descreva o código de status retornado e por que o Virtual Hosting exige o campo Host no HTTP/1.1]
+* **Resultado:** Foi retornado o código 400 Bad Request. O campo Host no HTTP/1.1 permite que um único servidor físico com um único endereço IP hospede múltiplos sites diferentes e sem esse cabeçalho, o servidor não tem como saber a qual domínio a requisição se destina e não consegue direcioná-la para os arquivos e configurações certos.
 
 ### Experimento 2: Semântica dos Métodos HTTP
 * **Análise dos Verbos:** Explique a diferença observada entre chamadas `GET`, `POST` e `OPTIONS`.
