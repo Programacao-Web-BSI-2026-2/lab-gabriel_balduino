@@ -1,1 +1,21 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de figuras</title>
+</head>
+<body>
+<figure>
+    <picture>
+        <source srcset="iff.avif" media="(min-width: 1024px)" type="image/avif">
+        
+        <source srcset="iff.webp" media="(max-width: 1023px)" type="image/webp">
+        
+        <img src="iff.jpg" alt="Logo IFF Fluminense" loading="lazy">
+    </picture>
+    
+    <figcaption>Figura 1.1: Logo IFF Fluminense.</figcaption>
+</figure>
+</body>
+</html>
