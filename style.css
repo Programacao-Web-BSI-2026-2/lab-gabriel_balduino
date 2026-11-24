@@ -1,0 +1,72 @@
+:root {
+  --cor-primaria: #1e3a8a;
+  --cor-fundo: #f1f5f9;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e293b;
+  --cor-borda: #cbd5e1;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-superficie);
+    grid-area: header;
+}
+
+.bemvindo {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    grid-area: aside;
+}
+
+.menu {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.sumario ul {
+    padding-right: 1.25rem;
+    padding-left: 0rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 3px;
+    grid-area: main;
+ 
+}
+
+.sumario a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.sumario li {
+    text-align: left;
+}
+
+.pagina {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.5rem;
+
+  grid-template-areas:
+    "header  header"
+    "main    aside"
+    "footer  footer";
+}
+
